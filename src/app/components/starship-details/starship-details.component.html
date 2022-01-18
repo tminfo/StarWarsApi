@@ -1,0 +1,48 @@
+<h3>Starship Details</h3>
+<div class="container">
+
+    <div class="card card mb-3" *ngIf="starship">
+
+      <div class="card-header text-white bg-primary">
+        <p><b>Starship Name: </b> {{ starship.name }}</p>
+      </div>
+
+      <div class="card-body text-dark bg-light">
+        <p><b>Model: </b> {{ starship.model }}</p>
+        <p><b>Manufacturer: </b> {{ starship.manufacturer }}</p>
+        <p><b>Cost: </b> {{ starship.cost_in_credits }}</p>
+        <p><b>Max atmosphering speed: </b> {{ starship.max_atmosphering_speed }}</p>
+        <p><b>Crew: </b> {{ starship.crew }}</p>
+        <p><b>number of passengers: </b> {{ starship.passengers }}</p>
+        <p><b>Cargo Capacity: </b>{{ starship.cargo_capacity }}</p> 
+        <p><b>consumables: </b>{{ starship.consumables }}</p>
+        <p><b>hyperdrive Rating: </b>{{ starship.hyperdrive_rating }}</p>
+        <p><b>MGLT: </b>{{ starship.MGLT }}</p>
+        <p><b>Starship Class: </b>{{ starship.starship_class }}</p>
+        <p><b>Created:</b>{{ starship.created }}</p>
+        <p><b>Edited:</b>{{ starship.edited }}</p>
+        <p><b>Url: </b>{{ starship.url }}</p>
+        <br />
+        
+        <p><b>films:</b></p>
+        <div *ngIf="starship.films">
+          <ul class="list-group list-group-flush" *ngFor="let films of starship.films; let i = index">
+            <li class="list-group-item">{{ starship.films[i] }}</li>
+          </ul>
+        </div>
+                 
+        <p><b>pilots: </b></p>
+        <div *ngIf="starship.pilots">
+          <ul class="list-group list-group-flush" *ngFor="pilots of starship.pilots; let i= index">
+            <li class="list-group-item">{{ starship.pilots[i] }} <a [routerLink]=[starship.pilots[i]|starshipUrlResize] class="card-link" style="text-decoration: none;">Details du pilote</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card-footer bg-transparent border-success">
+        <a routerLink="" class="card-link" style="text-decoration: none;">R e t o u r</a>
+      </div>
+
+    </div>
+    
+</div>

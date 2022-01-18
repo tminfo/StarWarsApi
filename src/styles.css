@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+.container-flex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.card-star{
+    flex: 50%;
+    align-self: flex-start;
+    flex-grow: initial;
+
+}

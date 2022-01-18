@@ -1,0 +1,27 @@
+<h1>Starships</h1>
+<div class="container-flex">
+
+    <div class="card-star card mb-3" *ngFor="let starship of starships">
+
+      <div class="card-header text-white bg-primary">
+        <p><b>Starship Name: </b> {{ starship.name }}</p>
+      </div>
+
+      <div class="card-body text-dark bg-light">
+        <p><b>model: </b> {{ starship.model }}</p>
+        <p><b>Manufacturer: </b> {{ starship.manufacturer }}</p>
+        <p><b>Cost: </b> {{ starship.cost_in_credits }}</p>
+        <p><b>Max atmosphering speed: </b> {{ starship.max_atmosphering_speed }}</p>
+        <p><b>Crew: </b> {{ starship.crew }}</p>
+        <p><b>number of passengers: </b> {{ starship.passengers }}</p>
+        <p><b>url: </b> {{ starship.url }}</p>
+      </div>
+
+      <div class="card-footer bg-transparent border-success">
+        <a [routerLink]=[starship.url|starshipUrlResize] class="card-link" style="text-decoration: none;">Starship Details</a>
+      </div>
+
+    </div>
+    
+</div>
+

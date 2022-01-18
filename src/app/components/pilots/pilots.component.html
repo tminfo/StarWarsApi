@@ -1,0 +1,35 @@
+<h3>Details du pilote</h3>
+
+<div class="container">
+
+    <div class="card-star card mb-3" *ngIf="pilot">
+
+      <div class="card-header text-white bg-primary">
+        <p><b>Pilot Name: </b> {{ pilot.name }}</p>
+      </div>
+
+      <div class="card-body text-dark bg-light">
+        <p><b>Height:</b>{{ pilot.height }}</p>
+        <p><b>Mass:</b>{{ pilot.mass }}</p> 
+        <p><b>Hair Color: </b>{{ pilot.hair_color }}</p>
+        <p><b>Skin Color:</b>{{ pilot.skin_color }}</p> 
+        <p><b>Eye Color:</b>{{ pilot.eye_color }}</p>
+        <p><b>Birth Year:</b>{{ pilot.birth_year }}</p> 
+        <p><b>Gender:</b>{{ pilot.gender }}</p> 
+        <p><b>Homeworld:</b>{{ pilot.homeworld }}</p>   
+        <p><b>Films:</b>{{ pilot.films }}</p>        
+        <P><B>Species:</B>{{ pilot.species }}</P>          
+        <P><B>Vehicles:</B>{{ pilot.vehicles }}</P>      
+        <P><B>Starships:</B>{{ pilot.starships }}</P>        
+        <p><b>Created:</b>{{ pilot.created }}</p>
+        <p><b>Edited:</b>{{ pilot.edited }}</p>
+        <p><b>Url: </b>{{ pilot.url }}</p>
+      </div>
+
+      <div class="card-footer bg-transparent border-success">
+        <a [routerLink]=[pilot.url|pilotUrlResize] class="card-link" style="text-decoration: none;">R e t o u r</a>
+      </div>
+
+    </div>
+    
+</div>
